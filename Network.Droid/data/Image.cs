@@ -14,26 +14,26 @@ namespace NueralNetrwork.Network
     class Image
     {
 
-        private String imageName;
+        private string imageName;
 
-        private String flagName;
+        private string flagName;
 
-        public Image(String countryName, String flagName)
+        public Image(string countryName, string flagName)
         {
             this.imageName = countryName;
             this.flagName = flagName;
         }
 
-        public String getImageName()
+        public string getImageName()
         {
             return imageName;
         }
 
-        public String getFlagName()
+        public string getFlagName()
         {
             return flagName;
         }
-    public String toString()
+    public string toString()
         {
             return this.imageName;
         }

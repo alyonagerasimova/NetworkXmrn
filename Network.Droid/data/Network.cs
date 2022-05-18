@@ -8,13 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NueralNetrwork.Network;
 
-namespace NueralNetrwork.Network
+namespace Network.Droid.data
 {
     class Network
     {
-        private String flagName;
-        private String nameNetwork;
+        private string flagName;
+        private string nameNetwork;
         private double[] inputValues;
         private double[] hiddenValues;
         private double[] outputValues;
@@ -25,10 +26,10 @@ namespace NueralNetrwork.Network
         private static double error = 0.0;
         private static int numberHiddenNeurons;
         private double[] pixelsValues;
-        private String[] percent = new String[27];
+        private string[] percent = new string[27];
         private List<double[]> patterns;
         private int[] answers = new int[Const.NUMBER_OUTPUT_NEURONS];
-        private static String answer;
+        private static string answer;
 
 
       /*  public Network(int numberHidden, double learningRate, bool flag)
@@ -45,7 +46,7 @@ namespace NueralNetrwork.Network
         }*/
 
         public Network(int readNumberHidden, double readLearningRateFactor, int readNumberCycles, double readError, double[][,] readWeights,
-                  double[][] readBias, double[] readHiddenValues, double[] readOutputValues, List<double[]> readPatterns, String[] readPercent)
+                  double[][] readBias, double[] readHiddenValues, double[] readOutputValues, List<double[]> readPatterns, string[] readPercent)
         {
             init(numberHiddenNeurons);
             numberHiddenNeurons = readNumberHidden;
@@ -118,21 +119,21 @@ namespace NueralNetrwork.Network
                 }
             }
         }
-        public void setNameNetwork(String nameNetwork)
+        public void setNameNetwork(string nameNetwork)
         {
             this.nameNetwork = nameNetwork;
         }
-        public void setFlagName(String flagName)
+        public void setFlagName(string flagName)
         {
             this.flagName = flagName;
         }
 
-        public String getFlagName()
+        public string getFlagName()
         {
             return flagName;
         }
 
-        public String getNameNetwork()
+        public string getNameNetwork()
         {
             return nameNetwork;
         }
@@ -235,7 +236,7 @@ namespace NueralNetrwork.Network
         {
             return error;
         }
-        public static String getAnswer()
+        public static string getAnswer()
         {
             return answer;
         }

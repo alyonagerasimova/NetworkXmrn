@@ -10,7 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace NueralNetrwork.Network.pictureService
+namespace Network.Droid.data.neuralNetwork.pictureService
 {
     class PictureService
     {

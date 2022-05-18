@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NueralNetrwork.Network.impl
+namespace Network.Droid.data.neuralNetwork.impl
 {
     class RPropImpl
     {

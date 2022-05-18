@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NueralNetrwork.Network.impl
+namespace Network.Droid.data.neuralNetwork.impl
 {
    public class BackPropImpl
     {
@@ -112,7 +112,7 @@ namespace NueralNetrwork.Network.impl
 
         private int numberCycles;
 
-        public void setError(Double error)
+        public void setError(double error)
         {
             this.error = error;
         }
@@ -124,7 +124,7 @@ namespace NueralNetrwork.Network.impl
 
         private double error;
         private double globalNetworkError;
-        private String answer;
+        private string answer;
 
         public BackPropImpl(int numberHiddenNeurons, double numberLearningRate)
         {

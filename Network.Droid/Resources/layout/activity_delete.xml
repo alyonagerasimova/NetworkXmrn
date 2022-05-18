@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -9,19 +10,21 @@
         android:id="@+id/header_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:layout_marginStart="16dp"
         android:text="@string/items_found"
-        android:textSize="18sp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="1dp"
-        android:layout_toEndOf="@+id/header_main"
+        android:textSize="18sp"
         android:text=""
-        android:textSize="18sp" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/header_main" />
 
     <EditText
         android:id="@+id/name"
@@ -33,15 +36,15 @@
         android:layout_below="@+id/header" />
 
     <Button
-        android:id="@+id/upload"
+        android:id="@+id/delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_marginHorizontal="10dp"
+        android:textSize="18sp"
+        android:text="@string/delete"
+        android:onClick="delete"
         android:layout_marginTop="10dp"
-        android:onClick="upload"
-        android:text="@string/download"
-        android:textSize="18sp" />
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@+id/name" />
 
     <ListView
         android:id="@+id/list"
@@ -49,5 +52,6 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="16dp"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/upload"/>
+        android:layout_below="@+id/delete" />
+    
 </RelativeLayout>

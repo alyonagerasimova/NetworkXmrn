@@ -39,30 +39,140 @@
         <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Mono.Android"/>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Xml"/>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012"/>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="MainActivity.cs"/>
-        <Compile Include="Resources\Resource.Designer.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="activities\ChooseImageActivity.cs" />
+        <Compile Include="activities\ListImagesActivity.cs" />
+        <Compile Include="activities\LoginRegistrationActivity.cs" />
+        <Compile Include="activities\MainActivity.cs" />
+        <Compile Include="activities\MainPageActivity.cs" />
+        <Compile Include="data\Const.cs" />
+        <Compile Include="data\db\SaveNetwork.cs" />
+        <Compile Include="data\Image.cs" />
+        <Compile Include="data\Network.cs" />
+        <Compile Include="data\neuralNetwork\impl\BackPropImpl.cs" />
+        <Compile Include="data\neuralNetwork\impl\iRPropImpl.cs" />
+        <Compile Include="data\neuralNetwork\impl\RPropImpl.cs" />
+        <Compile Include="data\neuralNetwork\pictureService\PictureService.cs" />
+        <Compile Include="data\neuralNetwork\pictureService\Serialization.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="ui\LoggedInNetworkView.cs" />
+        <Compile Include="ui\NetworkFormState.cs" />
+        <Compile Include="ui\NetworkResult.cs" />
+        <Compile Include="ui\NetworkViewModelFactory.cs" />
+        <Compile Include="ui\Validation.cs" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="Resources\AboutResources.txt"/>
-        <None Include="Assets\AboutAssets.txt"/>
-        <None Include="Properties\AndroidManifest.xml"/>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
     <ItemGroup>
-        <AndroidResource Include="Resources\layout\Tabbar.axml"/>
-        <AndroidResource Include="Resources\layout\Toolbar.axml"/>
-        <AndroidResource Include="Resources\values\styles.xml"/>
-        <AndroidResource Include="Resources\values\colors.xml"/>
+        <AndroidResource Include="Resources\drawable\arabic_c.png" />
+        <AndroidResource Include="Resources\drawable\ic_add_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\ic_baseline_arrow_back_24.xml" />
+        <AndroidResource Include="Resources\drawable\ic_baseline_location_on_24.xml" />
+        <AndroidResource Include="Resources\drawable\ic_dashboard_black_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\ic_home_black_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\ic_launcher_background.xml" />
+        <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
+        <AndroidResource Include="Resources\drawable\ic_menu_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\ic_notifications_black_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\ic_search_24dp.xml" />
+        <AndroidResource Include="Resources\drawable\item_state_normal.xml" />
+        <AndroidResource Include="Resources\drawable\item_state_pressed.xml" />
+        <AndroidResource Include="Resources\drawable\item_state_selected.xml" />
+        <AndroidResource Include="Resources\drawable\list_selector.xml" />
+        <AndroidResource Include="Resources\drawable\vector.xml" />
+        <AndroidResource Include="Resources\layout\activity_choose_image.xml" />
+        <AndroidResource Include="Resources\layout\activity_delete.xml" />
+        <AndroidResource Include="Resources\layout\activity_images_upload.xml" />
+        <AndroidResource Include="Resources\layout\activity_maps.xml" />
+        <AndroidResource Include="Resources\layout\activity_network.xml" />
+        <AndroidResource Include="Resources\layout\activity__login_register.xml" />
+        <AndroidResource Include="Resources\layout\activuty_upload.xml" />
+        <AndroidResource Include="Resources\layout\bottom_activity.xml" />
+        <AndroidResource Include="Resources\layout\list_images.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.webp" />
+        <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.webp" />
+        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.webp" />
+        <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.webp" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\c_a.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\c_c.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.webp" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.webp" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_a.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_b.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_c.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_d.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_e.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_f.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_g.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_h.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_i.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_j.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_k.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_l.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_m.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_n.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_o.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_p.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_q.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_r.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_s.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_t.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_u.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_v.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_w.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_x.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_y.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\arabic_z.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.webp" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.webp" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_a.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_b.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_c.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_d.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_e.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_f.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_g.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_h.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_i.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_j.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_k.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_l.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_m.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_n.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_o.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_p.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_q.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_r.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_s.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_t.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_u.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_v.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_w.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_x.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_y.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\printed_z.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.webp" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.webp" />
+        <AndroidResource Include="Resources\values\dimens.xml" />
+        <AndroidResource Include="Resources\values\strings.xml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\colors.xml" />
+        <AndroidResource Include="Resources\values\themes.xml" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Network\Network.csproj">
@@ -70,5 +180,8 @@
             <Name>Network</Name>
         </ProjectReference>
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets"/>
+    <ItemGroup>
+      <Folder Include="data\neuralNetwork" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

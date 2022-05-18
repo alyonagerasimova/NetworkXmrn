@@ -1,10 +1,12 @@
 ﻿using Android.Content;
 using Android.Database.Sqlite;
 using Microsoft.Data.Sqlite;
-using System;
 using System.Collections.Generic;
+using Java.Lang;
+using Java.Nio;
+using String = System.String;
 
-namespace NueralNetrwork.Network.db
+namespace Network.Droid.data.db
 {
     class SaveNetwork
     {
